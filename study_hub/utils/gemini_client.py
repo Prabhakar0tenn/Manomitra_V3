@@ -86,12 +86,13 @@ Question: {question}"""
         }
 
     except Exception as e:
-        logger.error(f"Gemini API error during Q&A: {e}")
-        return {
-            "answer": "AI service temporarily unavailable. Please try again later.",
-            "sources": [],
-            "document_name": doc_name
-        }
+    logger.exception("FULL GEMINI ERROR")
+    return {
+        "document_name": doc_name,
+        "summary": str(e),
+        "key_concepts": [],
+        "bullet_points": []
+    }
 
 def generate_notes(context: str, doc_name: str, detail_level: str) -> dict:
     """
