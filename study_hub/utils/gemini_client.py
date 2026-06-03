@@ -48,7 +48,7 @@ Document Text:
 Question: {question}"""
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-pro")
 
         response = model.generate_content(
             prompt,
@@ -137,7 +137,7 @@ Return response in this EXACT JSON format:
 Return ONLY the JSON, no other text."""
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-pro")
 
         response = model.generate_content(
             prompt,
@@ -202,7 +202,7 @@ Return ONLY this JSON, no other text:
 }}"""
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-pro")
 
         response = model.generate_content(
             prompt,
