@@ -48,7 +48,7 @@ Document Text:
 Question: {question}"""
 
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")  # ✅ Free tier available
+        model = genai.GenerativeModel("gemini-2.5-flash")  # ✅ Free tier available
 
         response = model.generate_content(
             prompt,
@@ -137,7 +137,7 @@ Return response in this EXACT JSON format:
 Return ONLY the JSON, no other text."""
 
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")  # ✅ Free tier available
+        model = genai.GenerativeModel("gemini-2.5-flash")  # ✅ Free tier available
 
         response = model.generate_content(
             prompt,
@@ -202,7 +202,7 @@ Return ONLY this JSON, no other text:
 }}"""
 
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")  # ✅ Free tier available
+        model = genai.GenerativeModel("gemini-2.5-flash")  # ✅ Free tier available
 
         response = model.generate_content(
             prompt,
